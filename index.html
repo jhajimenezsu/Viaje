@@ -1,0 +1,1797 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌍 Guía de Viaje Alicante-Mallorca-Barcelona-Marsella 19 Mar-10 Abr 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0f172a;
+            --secondary: #1e293b;
+            --accent: #38bdf8;
+            --success: #22c55e;
+            --warning: #f97316;
+            --danger: #ef4444;
+            --text: #f1f5f9;
+            --text-muted: #cbd5e1;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--primary) 0%, #0f172a 100%);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px 20px;
+            background: linear-gradient(135deg, #020617 0%, var(--secondary) 100%);
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 2px solid var(--accent);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: var(--accent);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        .trip-stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            background: rgba(56, 189, 248, 0.1);
+            padding: 15px 25px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .stat-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: var(--accent);
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            color: var(--text-muted);
+            margin-top: 5px;
+        }
+
+        .trip-summary-box {
+            margin-top: 20px;
+            padding: 18px 22px;
+            background: linear-gradient(135deg, rgba(34,197,94,0.12) 0%, rgba(56,189,248,0.12) 100%);
+            border-radius: 10px;
+            border: 1px solid rgba(56,189,248,0.5);
+            text-align: left;
+        }
+
+        .trip-summary-title {
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 6px;
+            font-size: 1.05em;
+        }
+
+        .trip-summary-text {
+            font-size: 0.95em;
+            color: var(--text-muted);
+        }
+
+        .trip-summary-text strong {
+            color: var(--text);
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .tab-btn {
+            padding: 12px 24px;
+            background: var(--secondary);
+            color: var(--text);
+            border: 2px solid var(--accent);
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-size: 0.95em;
+        }
+
+        .tab-btn:hover, .tab-btn.active {
+            background: var(--accent);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .itinerary-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: var(--secondary);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .itinerary-table th {
+            background: linear-gradient(135deg, #020617 0%, var(--secondary) 100%);
+            padding: 15px;
+            text-align: left;
+            color: var(--accent);
+            font-weight: 700;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .itinerary-table td {
+            padding: 15px;
+            border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        .itinerary-table tr:hover {
+            background: rgba(56, 189, 248, 0.1);
+        }
+
+        .itinerary-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .day-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.85em;
+        }
+
+        .lugar {
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .mallorca-highlight {
+            background: rgba(249, 115, 22, 0.1);
+            border-left: 4px solid #f97316;
+        }
+
+        .precio {
+            font-weight: 600;
+            color: var(--success);
+            font-size: 0.9em;
+        }
+
+        .checklist {
+            background: var(--secondary);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid var(--accent);
+        }
+
+        .checklist h3 {
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            margin: 8px 0;
+            background: rgba(56, 189, 248, 0.05);
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+
+        .checklist-item:hover {
+            background: rgba(56, 189, 248, 0.15);
+        }
+
+        .checklist-item input {
+            width: 20px;
+            height: 20px;
+            margin-right: 15px;
+            cursor: pointer;
+            accent-color: var(--accent);
+        }
+
+        .checklist-item input:checked + label {
+            text-decoration: line-through;
+            color: var(--text-muted);
+        }
+
+        .checklist-item label {
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .curiosity-box {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.15) 0%, rgba(56, 189, 248, 0.15) 100%);
+            border-left: 4px solid #f97316;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-right: 4px solid var(--accent);
+        }
+
+        .curiosity-box h4 {
+            color: #f97316;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .curiosity-box p {
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .gastro-section {
+            background: var(--secondary);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 2px solid rgba(34, 197, 94, 0.3);
+        }
+
+        .gastro-section h3 {
+            color: var(--success);
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+
+        .gastro-item {
+            background: rgba(34, 197, 94, 0.05);
+            padding: 15px;
+            margin: 12px 0;
+            border-left: 4px solid var(--success);
+            border-radius: 6px;
+        }
+
+        .gastro-item strong {
+            color: var(--success);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .gastro-item .precio {
+            margin-top: 8px;
+        }
+
+        .beer-box {
+            background: linear-gradient(135deg, rgba(217, 119, 6, 0.15) 0%, rgba(249, 115, 22, 0.15) 100%);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #d97706;
+        }
+
+        .beer-box h4 {
+            color: #f97316;
+            margin-bottom: 10px;
+        }
+
+        .shopping-category {
+            background: var(--secondary);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border: 2px solid rgba(99, 102, 241, 0.3);
+        }
+
+        .shopping-category h4 {
+            color: #6366f1;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .shopping-item {
+            background: rgba(99, 102, 241, 0.05);
+            padding: 12px;
+            margin: 8px 0;
+            border-left: 3px solid #6366f1;
+            border-radius: 4px;
+            font-size: 0.95em;
+        }
+
+        .shopping-item .product {
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .shopping-item .lugar {
+            font-size: 0.85em;
+            color: var(--text-muted);
+            margin-top: 5px;
+        }
+
+        .budget-table {
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .budget-table th, .budget-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        .budget-table th {
+            background: rgba(56, 189, 248, 0.2);
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .budget-total {
+            background: rgba(34, 197, 94, 0.15);
+            font-weight: 700;
+            color: var(--success);
+        }
+
+        .alert {
+            background: rgba(249, 115, 22, 0.15);
+            border-left: 4px solid #f97316;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 6px;
+            color: #fed7aa;
+        }
+
+        .alert strong {
+            color: #f97316;
+        }
+
+        .reservation-box {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.15) 0%, rgba(56, 189, 248, 0.15) 100%);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border: 2px solid var(--success);
+        }
+
+        .reservation-box h3 {
+            color: var(--success);
+            margin-bottom: 15px;
+        }
+
+        .res-item {
+            margin: 15px 0;
+            padding: 12px;
+            background: rgba(34, 197, 94, 0.05);
+            border-radius: 6px;
+        }
+
+        .res-item strong {
+            color: var(--text);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .res-item a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .res-item a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .trip-stats {
+                gap: 15px;
+            }
+
+            .itinerary-table {
+                font-size: 0.9em;
+            }
+
+            .itinerary-table td, .itinerary-table th {
+                padding: 10px;
+            }
+
+            .tabs {
+                gap: 5px;
+            }
+
+            .tab-btn {
+                padding: 10px 16px;
+                font-size: 0.85em;
+            }
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        .map-container {
+            width: 100%;
+            height: 500px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            border: 2px solid var(--accent);
+        }
+
+        .cronologia-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: var(--secondary);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .cronologia-table th {
+            background: linear-gradient(135deg, #020617 0%, var(--secondary) 100%);
+            padding: 15px;
+            text-align: left;
+            color: var(--accent);
+            font-weight: 700;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .cronologia-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        .cronologia-table tr:hover {
+            background: rgba(56, 189, 248, 0.1);
+        }
+
+        .punto-numero {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 32px;
+            font-weight: 700;
+            font-size: 0.9em;
+        }
+
+        .ciudad-alicante { background: rgba(56, 189, 248, 0.15); }
+        .ciudad-mallorca { background: rgba(249, 115, 22, 0.15); }
+        .ciudad-valencia { background: rgba(34, 197, 94, 0.15); }
+        .ciudad-barcelona { background: rgba(99, 102, 241, 0.15); }
+        .ciudad-marseille { background: rgba(168, 85, 247, 0.15); }
+
+        .mapa-info-box {
+            background: var(--secondary);
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid var(--accent);
+            border-radius: 8px;
+        }
+
+        .puntos-lista {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .punto-card {
+            background: var(--secondary);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .punto-card h4 {
+            color: var(--accent);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .punto-card p {
+            color: var(--text-muted);
+            font-size: 0.9em;
+            margin: 5px 0;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <div class="container">
+        <header>
+            <h1>🌍 Guía de Viaje España 2026</h1>
+            <p class="subtitle">Alicante • Mallorca • Valencia • Barcelona • Marsella</p>
+
+            <div class="trip-summary-box">
+                <div class="trip-summary-title">🎯 Resumen de tu viaje & objetivos</div>
+                <p class="trip-summary-text">
+                    Viaje de <strong>22 días (19 mar - 10 abr 2026)</strong> con base en <strong>Alicante</strong>, escapadas estratégicas a 
+                    <strong>Mallorca (fin de semana con tu mamá)</strong>, <strong>Valencia</strong>, <strong>Barcelona</strong> y <strong>Marsella</strong>, optimizado para 
+                    <strong>presupuesto bajo</strong> pero con alto valor en:
+                    <strong>playas, naturaleza, cultura, historia y experiencias locales</strong>. 
+                    El plan busca maximizar momentos significativos (especialmente el fin de semana con tu mamá), 
+                    aprovechar <strong>transportes low-cost</strong> (bus, ferry, tren) y <strong>gastronomía auténtica</strong> sin caer en trampas turísticas, 
+                    mientras recoges recuerdos y regalos <strong>útiles y especiales</strong> para amigos, novia y jefe.
+                </p>
+            </div>
+
+            <div class="trip-stats">
+                <div class="stat">
+                    <div class="stat-value">22 días</div>
+                    <div class="stat-label">19 mar - 10 abr</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">~970€</div>
+                    <div class="stat-label">≈ 4.559.000 COP (solo, sin vuelos)</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">5 ciudades</div>
+                    <div class="stat-label">+ 1 fin de semana con mamá 👩‍👦</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">35-65€/día</div>
+                    <div class="stat-label">Presupuesto low-cost objetivo</div>
+                </div>
+            </div>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab(event, 'itinerario')">📅 Itinerario</button>
+            <button class="tab-btn" onclick="switchTab(event, 'mapas')">🗺️ Mapas Interactivos</button>
+            <button class="tab-btn" onclick="switchTab(event, 'cronologia')">📋 Cronología</button>
+            <button class="tab-btn" onclick="switchTab(event, 'tareas')">✅ Lista de Tareas</button>
+            <button class="tab-btn" onclick="switchTab(event, 'curiosidades')">💡 Datos Curiosos</button>
+            <button class="tab-btn" onclick="switchTab(event, 'gastronomia')">🍽️ Gastronomía</button>
+            <button class="tab-btn" onclick="switchTab(event, 'cervezas')">🍺 Cervezas Locales</button>
+            <button class="tab-btn" onclick="switchTab(event, 'compras')">🎁 Compras & Regalos</button>
+            <button class="tab-btn" onclick="switchTab(event, 'presupuesto')">💰 Presupuesto</button>
+            <button class="tab-btn" onclick="switchTab(event, 'reservas')">🔗 Reservas</button>
+        </div>
+
+        <!-- TAB 0: MAPAS INTERACTIVOS -->
+        <div id="mapas" class="tab-content">
+            <h2 style="color: var(--accent); margin-bottom: 20px;">🗺️ Mapas Interactivos por Ciudad</h2>
+
+            <h3 style="color: var(--accent); margin-top: 30px;">1️⃣ Alicante (Base + Escapadas Cortas)</h3>
+            <div class="mapa-info-box">
+                <p><strong>Puntos clave:</strong> Playa Postiguet, Castillo Santa Bárbara, Faro del Albir, Isla Tabarca, Guadalest</p>
+            </div>
+            <div id="mapa-alicante" class="map-container"></div>
+            <div class="puntos-lista">
+                <div class="punto-card">
+                    <h4><span class="punto-numero">1</span> Playa Postiguet</h4>
+                    <p>🏖️ Playa urbana ideal para llegar, centro, paseo bonito</p>
+                    <p><strong>Fecha:</strong> 19-20/3, 24-26/3, 7-9/4</p>
+                </div>
+                <div class="punto-card">
+                    <h4><span class="punto-numero">2</span> Castillo Santa Bárbara</h4>
+                    <p>🏰 Entrada gratis, vistas 360°, historia medieval</p>
+                    <p><strong>Fecha:</strong> 20/3</p>
+                </div>
+                <div class="punto-card">
+                    <h4><span class="punto-numero">3</span> Faro del Albir</h4>
+                    <p>🥾 Senderismo ~2.5km fácil, playa y naturaleza</p>
+                    <p><strong>Fecha:</strong> 24-26/3</p>
+                </div>
+                <div class="punto-card">
+                    <h4><span class="punto-numero">4</span> Isla Tabarca</h4>
+                    <p>⛵ Ferry desde puerto, playas paradisíacas, buceo</p>
+                    <p><strong>Fecha:</strong> 30/3-3/4</p>
+                </div>
+                <div class="punto-card">
+                    <h4><span class="punto-numero">5</span> Guadalest</h4>
+                    <p>🏘️ Pueblo histórico en montaña, tiendas artesanía</p>
+                    <p><strong>Fecha:</strong> 30/3-3/4</p>
+                </div>
+            </div>
+
+            <h3 style="color: var(--accent); margin-top: 30px;">2️⃣ Mallorca (Fin de Semana con Mamá: 21-23/3)</h3>
+            <div class="mapa-info-box">
+                <p><strong>Puntos clave:</strong> Ferry Palma, Catedral La Seu, Serra Tramuntana, Sóller, Calas</p>
+            </div>
+            <div id="mapa-mallorca" class="map-container"></div>
+            <div class="puntos-lista">
+                <div class="punto-card">
+                    <h4><span class="punto-numero">6</span> Puerto Palma (Ferry)</h4>
+                    <p>⛴️ Salida y llegada ferry desde Alicante</p>
+                    <p><strong>Fecha:</strong> 21/3 (llegada), 23/3 (salida)</p>
+                </div>
+                <div class="punto-card">
+                    <h4><span class="punto-numero">7</span> Catedral La Seu</h4>
+                    <p>⛪ Gótica, ~10€ entrada, frente al mar</p>
+                    <p><strong>Fecha:</strong> 22/3</p>
+                </div>
+                <div class="punto-card">
+                    <h4><span class="punto-numero">8</span> Serra Tramuntana (sendero)</h4>
+                    <p>🥾 Rutas gratuitas, UNESCO, vistas espectaculares</p>
+                    <p><strong>Fecha:</strong> 22/3</p>
+                </div>
+                <div class="punto-card">
+                    <h4><span class="punto-numero">9</span> Pueblo Sóller</h4>
+                    <p>🏘️ Mercado local tradicional, tiendas, ambiente</p>
+                    <p><strong>Fecha:</strong> 23/3</p>
+                </div>
+                <div class="punto-card">
+                    <h4><span class="punto-numero">10</span> Cala Mondragó</h4>
+                    <p>🏖️ Playa natural protegida, turquesa, senderismo</p>
+                    <p><strong>Fecha:</strong> 22-23/3</p>
+                </div>
+            </div>
+
+            <h3 style="color: var(--accent); margin-top: 30px;">3️⃣ Valencia (27-29/3)</h3>
+            <div class="mapa-info-box">
+                <p><strong>Puntos clave:</strong> Playa Malvarrosa, Jardín Turia, Mercado Seda, Ciudad Artes, Mercado Central</p>
+            </div>
+            <div id="mapa-valencia" class="map-container"></div>
+            <div class="puntos-lista">
+                <div class="punto-card">
+                    <h4><span class="punto-numero">11</span> Playa Malvarrosa</h4>
+                    <p>🏖️ Playa urbana, paseo bonito, local</p>
+                    <p><strong>Fecha:</strong> 27-28/3</p>
+                </div>
+                <div class="punto-card">
+                    <h4><span class="punto-numero">12</span> Jardín Turia</h4>
+                    <p>🌳 Parque natural 9km, caminar/bici gratis</p>
+                    <p><strong>Fecha:</strong> 27-29/3</p>
+                </div>
+                <div class="punto-card">
+                    <h4><span class="punto-numero">13</span> Mercado Central</h4>
+                    <p>🏪 200+ puestos, productos frescos, local</p>
+                    <p><strong>Fecha:</strong> 27-28/3</p>
+                </div>
+                <div class="punto-card">
+                    <h4><span class="punto-numero">14</span> Ciudad Artes y Ciencias</h4>
+                    <p>🏛️ Exterior gratis, arquitectura futurista</p>
+                    <p><strong>Fecha:</strong> 28/3</p>
+                </div>
+                <div class="punto-card">
+                    <h4><span class="punto-numero">15</span> Mercado Seda</h4>
+                    <p>🏛️ Edificio histórico, tiendas, café</p>
+                    <p><strong>Fecha:</strong> 27/3</p>
+                </div>
+            </div>
+
+            <h3 style="color: var(--accent); margin-top: 30px;">4️⃣ Barcelona (4-6/4)</h3>
+            <div class="mapa-info-box">
+                <p><strong>Puntos clave:</strong> Sagrada Familia, Barrio Gòtico, Paseo de Gràcia, Parque Güell exterior, Playas</p>
+            </div>
+            <div id="mapa-barcelona" class="map-container"></div>
+            <div class="puntos-lista">
+                <div class="punto-card">
+                    <h4><span class="punto-numero">16</span> Sagrada Familia</h4>
+                    <p>⛪ Obra maestra Gaudí, exterior gratis impresiona</p>
+                    <p><strong>Fecha:</strong> 5/4</p>
+                </div>
+                <div class="punto-card">
+                    <h4><span class="punto-numero">17</span> Barrio Gòtico</h4>
+                    <p>🏘️ Medieval, laberintos calles, free tour</p>
+                    <p><strong>Fecha:</strong> 4-5/4</p>
+                </div>
+                <div class="punto-card">
+                    <h4><span class="punto-numero">18</span> Paseo de Gràcia</h4>
+                    <p>🏛️ Avenida modernista, tiendas, fachadas emblemáticas</p>
+                    <p><strong>Fecha:</strong> 4-5/4</p>
+                </div>
+                <div class="punto-card">
+                    <h4><span class="punto-numero">19</span> Playas Bogatell/Barceloneta</h4>
+                    <p>🏖️ Playas urbanas, atardecer bonito</p>
+                    <p><strong>Fecha:</strong> 4-5/4</p>
+                </div>
+                <div class="punto-card">
+                    <h4><span class="punto-numero">20</span> Bunkers del Carmel</h4>
+                    <p>🏞️ Vistas 360° ciudad + mar, gratis</p>
+                    <p><strong>Fecha:</strong> 5-6/4</p>
+                </div>
+            </div>
+
+            <h3 style="color: var(--accent); margin-top: 30px;">5️⃣ Marsella (5-6/4)</h3>
+            <div class="mapa-info-box">
+                <p><strong>Puntos clave:</strong> Vieux Port, Calanques, Cours Julien, Fort Saint-Jean, Playas</p>
+            </div>
+            <div id="mapa-marseille" class="map-container"></div>
+            <div class="puntos-lista">
+                <div class="punto-card">
+                    <h4><span class="punto-numero">21</span> Vieux Port (Puerto Viejo)</h4>
+                    <p>⛵ Centro histórico, cafés, pescado fresco, ambiente</p>
+                    <p><strong>Fecha:</strong> 5-6/4</p>
+                </div>
+                <div class="punto-card">
+                    <h4><span class="punto-numero">22</span> Calanques (senderismo)</h4>
+                    <p>🥾 Caminatas gratis 2-6h, calas turquesas, mar</p>
+                    <p><strong>Fecha:</strong> 5-6/4</p>
+                </div>
+                <div class="punto-card">
+                    <h4><span class="punto-numero">23</span> Cours Julien</h4>
+                    <p>🎨 Barrio bohemio, street art, mercado, bares</p>
+                    <p><strong>Fecha:</strong> 5/4</p>
+                </div>
+                <div class="punto-card">
+                    <h4><span class="punto-numero">24</span> Fort Saint-Jean</h4>
+                    <p>🏰 Fortaleza histórica, museo (entrada paga)</p>
+                    <p><strong>Fecha:</strong> 6/4</p>
+                </div>
+                <div class="punto-card">
+                    <h4><span class="punto-numero">25</span> Playa Prado</h4>
+                    <p>🏖️ Playa más cercana a centro, local</p>
+                    <p><strong>Fecha:</strong> 5-6/4</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 1: CRONOLOGÍA -->
+        <div id="cronologia" class="tab-content">
+            <h2 style="color: var(--accent); margin-bottom: 20px;">📋 Cronología Completa (Orden de Viaje)</h2>
+
+            <div class="alert">
+                <strong>Tabla de control:</strong> Todos los 25 puntos listados en orden cronológico con fechas, ciudad y tipo de actividad. Usa esto como checklist visual.
+            </div>
+
+            <table class="cronologia-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Punto / Lugar</th>
+                        <th>Ciudad</th>
+                        <th>Fechas</th>
+                        <th>Tipo</th>
+                        <th>Presupuesto Aprox</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="ciudad-alicante">
+                        <td><span class="punto-numero">1</span></td>
+                        <td>Playa Postiguet</td>
+                        <td>Alicante</td>
+                        <td>19/3, 24-26/3, 7-9/4</td>
+                        <td>🏖️ Playa</td>
+                        <td>Gratis</td>
+                    </tr>
+                    <tr class="ciudad-alicante">
+                        <td><span class="punto-numero">2</span></td>
+                        <td>Castillo Santa Bárbara</td>
+                        <td>Alicante</td>
+                        <td>20/3</td>
+                        <td>🏰 Cultura</td>
+                        <td>Gratis + propina free tour (5€)</td>
+                    </tr>
+                    <tr class="ciudad-alicante">
+                        <td><span class="punto-numero">3</span></td>
+                        <td>Faro del Albir (senderismo)</td>
+                        <td>Alicante</td>
+                        <td>24-26/3</td>
+                        <td>🥾 Naturaleza</td>
+                        <td>2€ bus</td>
+                    </tr>
+                    <tr class="ciudad-alicante">
+                        <td><span class="punto-numero">4</span></td>
+                        <td>Isla Tabarca (ferry + playas)</td>
+                        <td>Alicante</td>
+                        <td>30/3-3/4</td>
+                        <td>⛵ Naturaleza/Playa</td>
+                        <td>20€ ferry</td>
+                    </tr>
+                    <tr class="ciudad-alicante">
+                        <td><span class="punto-numero">5</span></td>
+                        <td>Guadalest (pueblo histórico)</td>
+                        <td>Alicante</td>
+                        <td>30/3-3/4</td>
+                        <td>🏘️ Cultura/Compras</td>
+                        <td>10€ bus</td>
+                    </tr>
+                    <tr class="ciudad-mallorca">
+                        <td><span class="punto-numero">6</span></td>
+                        <td>Puerto Palma (Ferry)</td>
+                        <td>Mallorca</td>
+                        <td>21/3 (ida), 23/3 (regreso)</td>
+                        <td>⛴️ Transporte</td>
+                        <td>100€ pp cada tramo</td>
+                    </tr>
+                    <tr class="ciudad-mallorca">
+                        <td><span class="punto-numero">7</span></td>
+                        <td>Catedral La Seu</td>
+                        <td>Mallorca</td>
+                        <td>22/3</td>
+                        <td>⛪ Cultura</td>
+                        <td>10€ entrada</td>
+                    </tr>
+                    <tr class="ciudad-mallorca">
+                        <td><span class="punto-numero">8</span></td>
+                        <td>Serra Tramuntana (senderismo)</td>
+                        <td>Mallorca</td>
+                        <td>22/3</td>
+                        <td>🥾 Naturaleza</td>
+                        <td>Gratis</td>
+                    </tr>
+                    <tr class="ciudad-mallorca">
+                        <td><span class="punto-numero">9</span></td>
+                        <td>Pueblo Sóller (mercado)</td>
+                        <td>Mallorca</td>
+                        <td>23/3</td>
+                        <td>🏪 Local/Compras</td>
+                        <td>Gratis + compras opcionales</td>
+                    </tr>
+                    <tr class="ciudad-mallorca">
+                        <td><span class="punto-numero">10</span></td>
+                        <td>Cala Mondragó</td>
+                        <td>Mallorca</td>
+                        <td>22-23/3</td>
+                        <td>🏖️ Playa/Naturaleza</td>
+                        <td>Gratis</td>
+                    </tr>
+                    <tr class="ciudad-valencia">
+                        <td><span class="punto-numero">11</span></td>
+                        <td>Playa Malvarrosa</td>
+                        <td>Valencia</td>
+                        <td>27-28/3</td>
+                        <td>🏖️ Playa</td>
+                        <td>Gratis</td>
+                    </tr>
+                    <tr class="ciudad-valencia">
+                        <td><span class="punto-numero">12</span></td>
+                        <td>Jardín Turia</td>
+                        <td>Valencia</td>
+                        <td>27-29/3</td>
+                        <td>🌳 Naturaleza</td>
+                        <td>Gratis</td>
+                    </tr>
+                    <tr class="ciudad-valencia">
+                        <td><span class="punto-numero">13</span></td>
+                        <td>Mercado Central</td>
+                        <td>Valencia</td>
+                        <td>27-28/3</td>
+                        <td>🏪 Local</td>
+                        <td>Gratis (compras opcionales)</td>
+                    </tr>
+                    <tr class="ciudad-valencia">
+                        <td><span class="punto-numero">14</span></td>
+                        <td>Ciudad Artes y Ciencias</td>
+                        <td>Valencia</td>
+                        <td>28/3</td>
+                        <td>🏛️ Arquitectura</td>
+                        <td>Exterior gratis (interior ~25€)</td>
+                    </tr>
+                    <tr class="ciudad-valencia">
+                        <td><span class="punto-numero">15</span></td>
+                        <td>Mercado Seda</td>
+                        <td>Valencia</td>
+                        <td>27/3</td>
+                        <td>🏛️ Cultura</td>
+                        <td>Gratis</td>
+                    </tr>
+                    <tr class="ciudad-barcelona">
+                        <td><span class="punto-numero">16</span></td>
+                        <td>Sagrada Familia</td>
+                        <td>Barcelona</td>
+                        <td>5/4</td>
+                        <td>⛪ Arquitectura</td>
+                        <td>Exterior gratis (interior ~21€)</td>
+                    </tr>
+                    <tr class="ciudad-barcelona">
+                        <td><span class="punto-numero">17</span></td>
+                        <td>Barrio Gòtico (medieval)</td>
+                        <td>Barcelona</td>
+                        <td>4-5/4</td>
+                        <td>🏘️ Cultura</td>
+                        <td>Gratis (free tour ~5€ propina)</td>
+                    </tr>
+                    <tr class="ciudad-barcelona">
+                        <td><span class="punto-numero">18</span></td>
+                        <td>Paseo de Gràcia</td>
+                        <td>Barcelona</td>
+                        <td>4-5/4</td>
+                        <td>🏛️ Modernismo</td>
+                        <td>Gratis</td>
+                    </tr>
+                    <tr class="ciudad-barcelona">
+                        <td><span class="punto-numero">19</span></td>
+                        <td>Playas Bogatell/Barceloneta</td>
+                        <td>Barcelona</td>
+                        <td>4-5/4</td>
+                        <td>🏖️ Playa</td>
+                        <td>Gratis</td>
+                    </tr>
+                    <tr class="ciudad-barcelona">
+                        <td><span class="punto-numero">20</span></td>
+                        <td>Bunkers del Carmel</td>
+                        <td>Barcelona</td>
+                        <td>5-6/4</td>
+                        <td>🏞️ Mirador</td>
+                        <td>Gratis</td>
+                    </tr>
+                    <tr class="ciudad-marseille">
+                        <td><span class="punto-numero">21</span></td>
+                        <td>Vieux Port (puerto viejo)</td>
+                        <td>Marsella</td>
+                        <td>5-6/4</td>
+                        <td>⛵ Local</td>
+                        <td>Gratis (café/comida variable)</td>
+                    </tr>
+                    <tr class="ciudad-marseille">
+                        <td><span class="punto-numero">22</span></td>
+                        <td>Calanques (senderismo)</td>
+                        <td>Marsella</td>
+                        <td>5-6/4</td>
+                        <td>🥾 Naturaleza/Playas</td>
+                        <td>Gratis</td>
+                    </tr>
+                    <tr class="ciudad-marseille">
+                        <td><span class="punto-numero">23</span></td>
+                        <td>Cours Julien</td>
+                        <td>Marsella</td>
+                        <td>5/4</td>
+                        <td>🎨 Bohemio</td>
+                        <td>Gratis (bebidas/compras variable)</td>
+                    </tr>
+                    <tr class="ciudad-marseille">
+                        <td><span class="punto-numero">24</span></td>
+                        <td>Fort Saint-Jean</td>
+                        <td>Marsella</td>
+                        <td>6/4</td>
+                        <td>🏰 Historia</td>
+                        <td>Variable (museo ~10-15€)</td>
+                    </tr>
+                    <tr class="ciudad-marseille">
+                        <td><span class="punto-numero">25</span></td>
+                        <td>Playa Prado</td>
+                        <td>Marsella</td>
+                        <td>5-6/4</td>
+                        <td>🏖️ Playa</td>
+                        <td>Gratis</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- TAB 1: ITINERARIO -->
+        <div id="itinerario" class="tab-content">
+            <h2 style="color: var(--accent); margin-bottom: 20px;">📅 Itinerario Detallado (19 mar - 10 abr)</h2>
+
+            <div class="alert">
+                <strong>👩‍👦 Fin de Semana Especial con Mamá:</strong> 21-23 marzo en Mallorca (ferry ida/vuelta desde Alicante, playa + senderismo + catedral)
+            </div>
+
+            <table class="itinerary-table">
+                <thead>
+                    <tr>
+                        <th>Día/Fecha</th>
+                        <th>Lugar</th>
+                        <th>Actividades Principales</th>
+                        <th>Alojamiento</th>
+                        <th>Transporte</th>
+                        <th>Presupuesto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="day-badge">1: 19/3</span></td>
+                        <td class="lugar">Alicante</td>
+                        <td><strong>Llegada</strong> • Playa Postiguet (gratis) • Paseo Explanada local (gratis) • Atardecer marítimo</td>
+                        <td>Alicante Backpackers (15€/70k COP) [Hostelworld]</td>
+                        <td>Bus EMT aeropuerto (2€/9.4k COP)</td>
+                        <td class="precio">17€ / 80k COP</td>
+                    </tr>
+                    <tr>
+                        <td><span class="day-badge">2: 20/3</span></td>
+                        <td class="lugar">Alicante</td>
+                        <td><strong>Castillo Santa Bárbara</strong> gratis + Free tour histórico (propina) • Casco antiguo • Mercado Central</td>
+                        <td>Alicante Backpackers (15€/70k)</td>
+                        <td>Bus local EMT (3€/14k COP)</td>
+                        <td class="precio">18€ / 85k COP</td>
+                    </tr>
+                    <tr class="mallorca-highlight">
+                        <td><span class="day-badge">3: 21/3</span> 👩‍👦</td>
+                        <td class="lugar">Mallorca (con mamá)</td>
+                        <td><strong>Ferry Alicante-Palma</strong> • Playa Cala Major (gratis) • Paseo Palma antigua • Atardecer</td>
+                        <td>Hostel Soller/Palma (25€ doble/118k pp) [Hostelworld]</td>
+                        <td>Ferry Balearia (100€ pp ida/470k)</td>
+                        <td class="precio">125€ pp / 588k COP</td>
+                    </tr>
+                    <tr class="mallorca-highlight">
+                        <td><span class="day-badge">4: 22/3</span> 👩‍👦</td>
+                        <td class="lugar">Mallorca (con mamá)</td>
+                        <td><strong>Sendero Serra Tramuntana</strong> (gratis) • Catedral Palma (10€/47k) • Cala Mondragó naturaleza</td>
+                        <td>Hostel (25€ doble/118k pp)</td>
+                        <td>Bus local (5€/23.5k pp)</td>
+                        <td class="precio">40€ pp / 188k COP</td>
+                    </tr>
+                    <tr class="mallorca-highlight">
+                        <td><span class="day-badge">5: 23/3</span> 👩‍👦</td>
+                        <td class="lugar">Mallorca (con mamá)</td>
+                        <td><strong>Mercado Sineu/Sóller</strong> local • Playas • Regreso ferry a Alicante</td>
+                        <td>Hostel (25€ doble/118k pp)</td>
+                        <td>Ferry Palma-Alicante (100€ pp/470k)</td>
+                        <td class="precio">125€ pp / 588k COP</td>
+                    </tr>
+                    <tr>
+                        <td><span class="day-badge">6-8: 24-26/3</span></td>
+                        <td class="lugar">Alicante</td>
+                        <td><strong>Playa San Juan</strong> (gratis) • Senderismo <strong>Faro Albir</strong> (gratis, bus ~2€) • Mercado Central • tiempo libre</td>
+                        <td>Alicante Backpackers (15€/70k)</td>
+                        <td>Bus local (3€/14k)</td>
+                        <td class="precio">18€ / 85k COP</td>
+                    </tr>
+                    <tr>
+                        <td><span class="day-badge">9-11: 27-29/3</span></td>
+                        <td class="lugar">Valencia (solo)</td>
+                        <td><strong>Playa Malvarrosa</strong> (gratis) • <strong>Jardín Turia</strong> naturaleza • Mercado Central • Ciudad Artes (exterior)</td>
+                        <td>Russafa Youth Hostel (18€/85k) [Hostelworld]</td>
+                        <td>Bus Alsa ida/regreso (10€/47k)</td>
+                        <td class="precio">28€ / 132k COP</td>
+                    </tr>
+                    <tr>
+                        <td><span class="day-badge">12-16: 30/3-3/4</span></td>
+                        <td class="lugar">Alicante</td>
+                        <td><strong>Isla Tabarca ferry</strong> (20€/94k playas) • <strong>Guadalest</strong> pueblo histórico (bus 10€/47k) • MARQ museo (3€/14k) • tiempo chill</td>
+                        <td>Alicante Backpackers (15€/70k)</td>
+                        <td>Ferry/bus (30€/141k)</td>
+                        <td class="precio">48€ / 226k COP</td>
+                    </tr>
+                    <tr>
+                        <td><span class="day-badge">17-19: 4-6/4</span></td>
+                        <td class="lugar">Barcelona-Marsella (solo)</td>
+                        <td><strong>Barcelona:</strong> Gòtic, Sagrada Familia exterior, playa Bogatell • <strong>Marsella:</strong> Calanques hikes gratis, Vieux Port</td>
+                        <td>St Christopher's Barna (20€/94k), Marseille Hostel (20€/94k)</td>
+                        <td>Bus Alsa (30€/141k) + tren Renfe/SNCF (50€/235k)</td>
+                        <td class="precio">140€ / 658k COP</td>
+                    </tr>
+                    <tr>
+                        <td><span class="day-badge">20-22: 7-9/4</span></td>
+                        <td class="lugar">Alicante</td>
+                        <td><strong>Playas vírgenes Carabassí</strong> (gratis) • Free tour final • compras & despedida</td>
+                        <td>Alicante Backpackers (15€/70k)</td>
+                        <td>Local / caminatas</td>
+                        <td class="precio">15€ / 71k COP</td>
+                    </tr>
+                    <tr>
+                        <td><span class="day-badge">23: 10/4</span></td>
+                        <td class="lugar">Salida</td>
+                        <td><strong>Regreso a Medellín</strong> • Check-out • traslado aeropuerto</td>
+                        <td>-</td>
+                        <td>Bus EMT (2€/9.4k)</td>
+                        <td class="precio">2€ / 9.4k COP</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- TAB 2: LISTA DE TAREAS -->
+        <div id="tareas" class="tab-content">
+            <h2 style="color: var(--accent); margin-bottom: 20px;">✅ Lista de Tareas (Tachable)</h2>
+
+            <div class="checklist">
+                <h3>Antes de Viajar (Febrero-Marzo)</h3>
+                <div class="checklist-item">
+                    <input type="checkbox" id="task1">
+                    <label for="task1">📱 Descargar apps: Omio, Renfe, Alsa, Hostelworld, Maps, Citymapper, BlaBlaCar</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="task2">
+                    <label for="task2">🛫 Comprar vuelos Medellín-Alicante (19 mar - 10 abr) vía Kayak/Skyscanner/Iberia</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="task3">
+                    <label for="task3">⛴️ Reservar ferries Balearia: Alicante-Palma (21 mar) + Palma-Alicante (23 mar) para ti y tu mamá</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="task4">
+                    <label for="task4">🏨 Reservar hostales: Alicante Backpackers, Russafa (Valencia), Hostel Sóller/Palma, St Christopher's (Barcelona), hostel Marseille</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="task5">
+                    <label for="task5">🚌 Comprar buses Alsa: Alicante-Valencia-Alicante, Alicante-Barcelona y regreso</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="task6">
+                    <label for="task6">🚂 Comprar tren Renfe/SNCF: Barcelona-Marsella ida y regreso</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="task7">
+                    <label for="task7">💳 Avisar al banco de viaje a Europa y habilitar tarjetas para uso internacional</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="task8">
+                    <label for="task8">🆔 Verificar pasaporte (mínimo 6 meses de vigencia) + requisitos Schengen</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="task9">
+                    <label for="task9">📋 Contratar seguro de viaje (salud, robo, cancelación)</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="task10">
+                    <label for="task10">📶 Definir plan de datos: eSIM, SIM local o roaming controlado</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="task11">
+                    <label for="task11">💰 Retirar o cambiar ~300-500€ (efectivo) para primeros días</label>
+                </div>
+            </div>
+
+            <div class="checklist">
+                <h3>Durante el Viaje</h3>
+                <div class="checklist-item">
+                    <input type="checkbox" id="task13">
+                    <label for="task13">🏖️ Día 1: Paseo suave por Postiguet, ajustarte al horario y descansar</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="task14">
+                    <label for="task14">🏰 Subir al Castillo Santa Bárbara al atardecer para ver toda la Costa Blanca</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="task15">
+                    <label for="task15">👩‍👦 Disfrutar conscientemente el fin de semana en Mallorca con tu mamá (fotos, conversaciones, paseos)</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="task16">
+                    <label for="task16">🥾 Hacer la ruta del Faro del Albir y al menos una ruta corta en la Serra Tramuntana</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="task17">
+                    <label for="task17">🥘 Comer paella auténtica en Valencia (no en sitios ultra turísticos)</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="task18">
+                    <label for="task18">🍺 Probar al menos una cerveza artesanal en Alicante, Mallorca, Valencia y Barcelona</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="task19">
+                    <label for="task19">🎁 Ir marcando las compras clave de regalos (turrón, chocolate, vino, sal, arte)</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="task20">
+                    <label for="task20">⛵ Hacer una caminata sencilla por las Calanques en Marsella (mirador con vistas al mar)</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="task21">
+                    <label for="task21">✍️ Anotar 3 momentos favoritos de cada ciudad (para recordar y compartir)</label>
+                </div>
+            </div>
+
+            <div class="checklist">
+                <h3>Después del Viaje</h3>
+                <div class="checklist-item">
+                    <input type="checkbox" id="task23">
+                    <label for="task23">🛫 Volver con tiempo al aeropuerto de Alicante el 10 de abril</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="task24">
+                    <label for="task24">🎁 Entregar regalos a amigos, novia y jefe con una historia detrás de cada uno</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="task25">
+                    <label for="task25">💳 Revisar gastos de tarjeta y comparar con el presupuesto inicial</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="task26">
+                    <label for="task26">🗂️ Guardar este HTML como registro de viaje (y base para próximos)</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 3: CURIOSIDADES -->
+        <div id="curiosidades" class="tab-content">
+            <h2 style="color: var(--accent); margin-bottom: 20px;">💡 Datos Curiosos & Tips por Destino</h2>
+
+            <h3 style="color: var(--accent); margin-top: 30px;">🏖️ Alicante (Base)</h3>
+            <div class="curiosity-box">
+                <h4>Historia</h4>
+                <p>Alicante fue un puerto clave del Mediterráneo desde la antigüedad. El Castillo de Santa Bárbara, en la cima del monte Benacantil, es una fortaleza del siglo IX con vistas increíbles y entrada gratuita.</p>
+            </div>
+            <div class="curiosity-box">
+                <h4>Playas Únicas</h4>
+                <p><strong>Postiguet</strong> (urbana, ideal primera toma de contacto), <strong>San Juan</strong> (larga, más local) y <strong>Carabassí</strong> (más virgen, dunas y naturaleza). La <strong>isla de Tabarca</strong>, antigua guarida de piratas, es la única isla habitada de la Comunidad Valenciana.</p>
+            </div>
+            <div class="curiosity-box">
+                <h4>Cultura Local</h4>
+                <p>La Explanada de España, con su mosaico ondulado, es uno de los paseos más fotogénicos de la ciudad. Las Hogueras de San Juan (junio) son su fiesta grande, con monumentos de cartón piedra que se queman al final.</p>
+            </div>
+
+            <h3 style="color: var(--accent); margin-top: 30px;">🏝️ Mallorca</h3>
+            <div class="curiosity-box">
+                <h4>Serra de Tramuntana</h4>
+                <p>La Serra de Tramuntana fue declarada Patrimonio Mundial por la UNESCO. Sus rutas combinan mar, montaña y pueblos de piedra como Sóller, Deià o Valldemossa. Es perfecta para senderismo suave en marzo (no hace tanto calor).</p>
+            </div>
+            <div class="curiosity-box">
+                <h4>Catedral de Palma</h4>
+                <p>La Seu, la catedral gótica de Palma, tiene uno de los rosetones más grandes del mundo. Está frente al mar, algo poco habitual en una catedral europea, y su interior fue intervenido parcialmente por Gaudí.</p>
+            </div>
+
+            <h3 style="color: var(--accent); margin-top: 30px;">🥘 Valencia</h3>
+            <div class="curiosity-box">
+                <h4>Cuna de la Paella</h4>
+                <p>La auténtica paella valenciana no lleva marisco, sino pollo, conejo y verduras. El <strong>Jardín del Turia</strong>, donde pasearás, es el antiguo cauce del río Turia, desviado tras una riada y convertido en parque urbano kilométrico.</p>
+            </div>
+
+            <h3 style="color: var(--accent); margin-top: 30px;">🏛️ Barcelona</h3>
+            <div class="curiosity-box">
+                <h4>Gaudí & Modernismo</h4>
+                <p>Barcelona es la capital del modernismo catalán. Aunque no entres a todos los edificios, solo callejear por el Eixample y el Barrio Gótico ya te muestra fachadas únicas y una mezcla brutal de historia y diseño.</p>
+            </div>
+
+            <h3 style="color: var(--accent); margin-top: 30px;">⛵ Marsella</h3>
+            <div class="curiosity-box">
+                <h4>Ciudad Mediterránea</h4>
+                <p>Marsella es la ciudad más antigua de Francia, fundada por marineros griegos. Sus <strong>Calanques</strong> son pequeñas bahías entre acantilados de roca blanca y mar turquesa, ideales para caminatas y vistas espectaculares sin gastar un euro.</p>
+            </div>
+        </div>
+
+        <!-- TAB 4: GASTRONOMÍA -->
+        <div id="gastronomia" class="tab-content">
+            <h2 style="color: var(--accent); margin-bottom: 20px;">🍽️ Gastronomía Local (Comer Bien y Barato)</h2>
+
+            <h3 style="color: var(--accent);">🏖️ Alicante</h3>
+            <div class="gastro-section">
+                <h3 style="margin-top: 0;">Platos Típicos</h3>
+                <div class="gastro-item">
+                    <strong>🍚 Arroces marineros</strong>
+                    <p>Variante local de los arroces valencianos, con mariscos, sepia, caldos muy sabrosos.</p>
+                    <div class="precio">12-16€ (56-75k COP)</div>
+                </div>
+                <div class="gastro-item">
+                    <strong>🥖 Pan con tomate y aceite</strong>
+                    <p>Desayuno simple y barato: pan tostado, tomate rallado, aceite de oliva y sal.</p>
+                    <div class="precio">2-3€ (9-14k COP)</div>
+                </div>
+            </div>
+
+            <div class="gastro-section">
+                <h3 style="margin-top: 0;">Restaurantes Presupuesto Bajo</h3>
+                <div class="gastro-item">
+                    <strong>🍴 Horchatería Azul</strong>
+                    <p>Horchata artesanal y fartons. Ideal desayuno o merienda local.</p>
+                    <div class="precio">3-5€ (14-23k COP)</div>
+                </div>
+                <div class="gastro-item">
+                    <strong>🍴 Bares del Mercado Central</strong>
+                    <p>Pescado fresco, tapas y menús del día a buen precio en ambiente local.</p>
+                    <div class="precio">10-15€ (47-70k COP)</div>
+                </div>
+            </div>
+
+            <h3 style="color: var(--accent); margin-top: 30px;">🏝️ Mallorca</h3>
+            <div class="gastro-section">
+                <h3 style="margin-top: 0;">Platos Típicos</h3>
+                <div class="gastro-item">
+                    <strong>🥙 Pa amb oli</strong>
+                    <p>Pan con aceite, tomate y embutidos o queso local. Básico y delicioso.</p>
+                    <div class="precio">4-6€ (19-28k COP)</div>
+                </div>
+                <div class="gastro-item">
+                    <strong>🍚 Arròs brut</strong>
+                    <p>Arroz caldoso con carnes y especias, muy tradicional.</p>
+                    <div class="precio">11-15€ (52-70k COP)</div>
+                </div>
+            </div>
+
+            <h3 style="color: var(--accent); margin-top: 30px;">🥘 Valencia</h3>
+            <div class="gastro-section">
+                <h3 style="margin-top: 0;">Platos Clave</h3>
+                <div class="gastro-item">
+                    <strong>🥘 Paella valenciana</strong>
+                    <p>La original, con pollo, conejo y verduras. Evita sitios de paella congelada en zonas ultra turísticas.</p>
+                    <div class="precio">14-18€ pp (66-85k COP)</div>
+                </div>
+                <div class="gastro-item">
+                    <strong>🍊 Horchata con fartons</strong>
+                    <p>Bebida de chufa muy típica en Valencia.</p>
+                    <div class="precio">3-5€ (14-23k COP)</div>
+                </div>
+            </div>
+
+            <h3 style="color: var(--accent); margin-top: 30px;">🏛️ Barcelona y ⛵ Marsella</h3>
+            <div class="gastro-section">
+                <h3 style="margin-top: 0;">Barcelona</h3>
+                <div class="gastro-item">
+                    <strong>🧀 Tapas</strong>
+                    <p>Patatas bravas, croquetas, escalivada, pulpo a la gallega. Ideal para picar variado.</p>
+                    <div class="precio">3-6€ por tapa (14-28k COP)</div>
+                </div>
+            </div>
+
+            <div class="gastro-section">
+                <h3 style="margin-top: 0;">Marsella</h3>
+                <div class="gastro-item">
+                    <strong>🍲 Bouillabaisse</strong>
+                    <p>Sopa de pescado típica de Marsella. Un capricho caro pero muy local.</p>
+                    <div class="precio">25-35€ (117-164k COP)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 5: CERVEZAS -->
+        <div id="cervezas" class="tab-content">
+            <h2 style="color: var(--accent); margin-bottom: 20px;">🍺 Cervezas Locales a Probar</h2>
+
+            <h3 style="color: var(--accent);">Alicante & Costa Blanca</h3>
+            <div class="beer-box">
+                <h4>Cervezas artesanas locales</h4>
+                <p>Busca bares especializados en cerveza artesana. Muchas referencias españolas y europeas, con precios entre 4-7€ la pinta.</p>
+                <div class="precio">4-7€ (19-33k COP)</div>
+            </div>
+
+            <h3 style="color: var(--accent); margin-top: 30px;">Mallorca</h3>
+            <div class="beer-box">
+                <h4>Forastera</h4>
+                <p>Cervecería artesanal mallorquina. Tienen visitas y catas con tapas locales.</p>
+                <div class="precio">3-5€ (14-23k COP)</div>
+            </div>
+
+            <h3 style="color: var(--accent); margin-top: 30px;">Valencia & Barcelona</h3>
+            <div class="beer-box">
+                <h4>Bares craft</h4>
+                <p>En barrios como Ruzafa (Valencia) y el Eixample (Barcelona) hay muchos locales con 10-20 grifos de cervezas artesanas.</p>
+                <div class="precio">5-8€ (23-38k COP)</div>
+            </div>
+
+            <h3 style="color: var(--accent); margin-top: 30px;">Marsella</h3>
+            <div class="beer-box">
+                <h4>Escena craft emergente</h4>
+                <p>Además de vino y pastis, puedes encontrar cervezas artesanas provenzales en pequeños bares del Vieux Port.</p>
+                <div class="precio">4-7€ (19-33k COP)</div>
+            </div>
+
+            <div class="alert">
+                <strong>Tip:</strong> Pide formatos pequeños (cañas) para probar más variedades sin pasarte de tu presupuesto ni energía.
+            </div>
+        </div>
+
+        <!-- TAB 6: COMPRAS & REGALOS -->
+        <div id="compras" class="tab-content">
+            <h2 style="color: var(--accent); margin-bottom: 20px;">🎁 Compras & Regalos (Amigos, Novia, Jefe)</h2>
+
+            <h3 style="color: var(--accent);">Para tu novia</h3>
+            <div class="shopping-category">
+                <div class="shopping-item">
+                    <div class="product">Joyería artesanal mallorquina</div>
+                    <p>Perlas o piezas de diseño local en tiendas del casco antiguo de Palma.</p>
+                    <div class="lugar">Palma de Mallorca</div>
+                    <div class="precio">40-100€ (188-470k COP)</div>
+                </div>
+                <div class="shopping-item">
+                    <div class="product">Cosmética natural de Provence</div>
+                    <p>Jabones, velas y cremas con lavanda y hierbas de la región.</p>
+                    <div class="lugar">Marsella</div>
+                    <div class="precio">15-30€ (70-141k COP)</div>
+                </div>
+            </div>
+
+            <h3 style="color: var(--accent); margin-top: 30px;">Para amigos</h3>
+            <div class="shopping-category">
+                <div class="shopping-item">
+                    <div class="product">Turrón de Jijona/Alicante</div>
+                    <p>Dulce típico perfecto para llevar a casa. Hay muchas calidades y formatos.</p>
+                    <div class="lugar">Tiendas y Mercado Central de Alicante</div>
+                    <div class="precio">5-12€ (23-56k COP)</div>
+                </div>
+                <div class="shopping-item">
+                    <div class="product">Chocolate de Villajoyosa</div>
+                    <p>Caja de chocolates de una de las capitales chocolateras de España.</p>
+                    <div class="lugar">Villajoyosa / tiendas en Alicante</div>
+                    <div class="precio">10-18€ (47-85k COP)</div>
+                </div>
+                <div class="shopping-item">
+                    <div class="product">Imanes, postales, pequeños recuerdos</div>
+                    <p>Baratos, ligeros y fáciles de compartir entre varios amigos.</p>
+                    <div class="lugar">Alicante, Valencia, Barcelona</div>
+                    <div class="precio">2-5€ (9-23k COP) cada uno</div>
+                </div>
+            </div>
+
+            <h3 style="color: var(--accent); margin-top: 30px;">Para tu jefe</h3>
+            <div class="shopping-category">
+                <div class="shopping-item">
+                    <div class="product">Vino reserva español de calidad</div>
+                    <p>Un Rioja/Priorat o vino de Alicante bien presentado es un regalo elegante.</p>
+                    <div class="lugar">Tiendas especializadas en Alicante / Barcelona</div>
+                    <div class="precio">40-70€ (188-329k COP)</div>
+                </div>
+                <div class="shopping-item">
+                    <div class="product">Set gourmet (vino + turrón + sal)</div>
+                    <p>Pack que combina varios productos típicos con buena presentación.</p>
+                    <div class="lugar">Tiendas gourmet en ciudades grandes</div>
+                    <div class="precio">50-80€ (235-376k COP)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 7: PRESUPUESTO -->
+        <div id="presupuesto" class="tab-content">
+            <h2 style="color: var(--accent); margin-bottom: 20px;">💰 Presupuesto Detallado (1 persona, sin vuelos)</h2>
+
+            <div class="alert">
+                <strong>Tipo de cambio estimado:</strong> 1€ ≈ 4.700 COP | Presupuesto objetivo ≈ 970€ (4,5M COP) según tu rango bajo.
+            </div>
+
+            <table class="budget-table">
+                <thead>
+                    <tr>
+                        <th>Categoría</th>
+                        <th>Detalles</th>
+                        <th>Euros</th>
+                        <th>COP</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="4" style="background: rgba(56,189,248,0.2); font-weight: 700; color: var(--accent);">🏨 Alojamiento</td>
+                    </tr>
+                    <tr>
+                        <td>Alicante</td>
+                        <td>10 noches x ~15€</td>
+                        <td>150€</td>
+                        <td>705.000</td>
+                    </tr>
+                    <tr>
+                        <td>Valencia</td>
+                        <td>3 noches x ~18€</td>
+                        <td>54€</td>
+                        <td>253.800</td>
+                    </tr>
+                    <tr>
+                        <td>Mallorca</td>
+                        <td>3 noches x ~25€</td>
+                        <td>75€</td>
+                        <td>352.500</td>
+                    </tr>
+                    <tr>
+                        <td>Barcelona + Marsella</td>
+                        <td>3 noches x ~20€</td>
+                        <td>60€</td>
+                        <td>282.000</td>
+                    </tr>
+                    <tr class="budget-total">
+                        <td><strong>Subtotal alojamiento</strong></td>
+                        <td></td>
+                        <td><strong>339€</strong></td>
+                        <td><strong>1.593.300</strong></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="background: rgba(56,189,248,0.2); font-weight: 700; color: var(--accent);">🚌 Transporte interno</td>
+                    </tr>
+                    <tr>
+                        <td>Ferries Alicante-Mallorca-Alicante</td>
+                        <td>2 tramos x ~100€</td>
+                        <td>200€</td>
+                        <td>940.000</td>
+                    </tr>
+                    <tr>
+                        <td>Buses y trenes</td>
+                        <td>Alsa, Renfe, SNCF (Valencia, Barcelona, Marsella)</td>
+                        <td>145€</td>
+                        <td>681.500</td>
+                    </tr>
+                    <tr class="budget-total">
+                        <td><strong>Subtotal transporte</strong></td>
+                        <td></td>
+                        <td><strong>345€</strong></td>
+                        <td><strong>1.621.500</strong></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="background: rgba(56,189,248,0.2); font-weight: 700; color: var(--accent);">🍽️ Comida</td>
+                    </tr>
+                    <tr>
+                        <td>Comidas diarias</td>
+                        <td>Desayuno ligero + menú del día + cena sencilla</td>
+                        <td>~20€/día x 20 días</td>
+                        <td>400€</td>
+                        <td>1.880.000</td>
+                    </tr>
+                    <tr class="budget-total">
+                        <td><strong>Subtotal comida</strong></td>
+                        <td></td>
+                        <td><strong>400€</strong></td>
+                        <td><strong>1.880.000</strong></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="background: rgba(56,189,248,0.2); font-weight: 700; color: var(--accent);">🎫 Actividades & Extras</td>
+                    </tr>
+                    <tr>
+                        <td>Entradas puntuales</td>
+                        <td>Catedral, museos, propinas free tours</td>
+                        <td>40€</td>
+                        <td>188.000</td>
+                    </tr>
+                    <tr>
+                        <td>Regalos</td>
+                        <td>Turrón, chocolate, vino, pequeños obsequios</td>
+                        <td>80€</td>
+                        <td>376.000</td>
+                    </tr>
+                    <tr class="budget-total">
+                        <td><strong>Subtotal actividades + regalos</strong></td>
+                        <td></td>
+                        <td><strong>120€</strong></td>
+                        <td><strong>564.000</strong></td>
+                    </tr>
+                    <tr class="budget-total">
+                        <td><strong>TOTAL APROX.</strong></td>
+                        <td><strong>(sin vuelos Colombia–España)</strong></td>
+                        <td><strong>~970€</strong></td>
+                        <td><strong>~4.559.800 COP</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="alert">
+                <strong>Tip:</strong> si ajustas algo (menos Marsella o menos comidas fuera), puedes bajar fácilmente a 800-850€, pero 970€ te da margen cómodo sin sentir que estás sufriendo el presupuesto.
+            </div>
+        </div>
+
+        <!-- TAB 8: RESERVAS -->
+        <div id="reservas" class="tab-content">
+            <h2 style="color: var(--accent); margin-bottom: 20px;">🔗 Reservas Clave (en orden de prioridad)</h2>
+
+            <div class="alert">
+                <strong>1) Ferries y vuelos</strong> → 2) Hostales → 3) Buses/Trenes → 4) Extras.  
+                Entre febrero y marzo los precios suben rápido: mientras antes bloquees, mejor.
+            </div>
+
+            <div class="reservation-box">
+                <h3>⛴️ Ferries Alicante ↔ Palma (Mallorca)</h3>
+                <div class="res-item">
+                    <strong>Empresa:</strong> Balearia  
+                    <strong>Fechas sugeridas:</strong> Ida 21 mar, vuelta 23 mar 2026  
+                    <strong>Web:</strong> <a href="https://www.balearia.com/es" target="_blank">https://www.balearia.com/es</a>  
+                    <strong>Precio aprox:</strong> ~100€ por tramo y persona (sin coche)  
+                    <strong>Duración:</strong> 5-8h según horario  
+                </div>
+            </div>
+
+            <div class="reservation-box">
+                <h3>🏨 Hostales (Hostelworld / Booking)</h3>
+                <div class="res-item">
+                    <strong>Alicante Backpackers (ejemplo)</strong>
+                    <strong>Plataforma:</strong> <a href="https://www.hostelworld.com/es/albergues/europa/espana/alicante/" target="_blank">Hostelworld - Alicante</a>
+                    <strong>Notas:</strong> busca hostal bien valorado cerca de centro/playa, 10 noches en total repartidas.
+                </div>
+                <div class="res-item">
+                    <strong>Russafa Youth Hostel (Valencia)</strong>
+                    <strong>Plataforma:</strong> <a href="https://www.hostelworld.com/es/albergues/europa/espana/valencia/" target="_blank">Hostelworld - Valencia</a>
+                </div>
+                <div class="res-item">
+                    <strong>Hostel Sóller / Palma Backpackers (Mallorca)</strong>
+                    <strong>Plataforma:</strong> <a href="https://www.hostelworld.com/es/albergues/europa/espana/mallorca/" target="_blank">Hostelworld - Mallorca</a>
+                </div>
+                <div class="res-item">
+                    <strong>St Christopher's Barcelona & hostel en Marsella</strong>
+                    <strong>Plataforma:</strong> Hostelworld / Booking para 1 noche en Barcelona y 2 en Marsella.
+                </div>
+            </div>
+
+            <div class="reservation-box">
+                <h3>🚌 Buses & 🚂 Trenes</h3>
+                <div class="res-item">
+                    <strong>Alsa (buses)</strong>
+                    <strong>Web:</strong> <a href="https://www.alsa.es" target="_blank">https://www.alsa.es</a>  
+                    <strong>Tramos:</strong> Alicante-Valencia, Alicante-Barcelona, Barcelona-Alicante.
+                </div>
+                <div class="res-item">
+                    <strong>Renfe / SNCF (trenes Barcelona-Marsella)</strong>
+                    <strong>Webs:</strong> <a href="https://www.renfe.com" target="_blank">https://www.renfe.com</a> | <a href="https://www.sncf-connect.com" target="_blank">https://www.sncf-connect.com</a>
+                </div>
+            </div>
+
+            <div class="reservation-box">
+                <h3>✈️ Vuelos Medellín ↔ Alicante</h3>
+                <div class="res-item">
+                    <strong>Buscadores:</strong> <a href="https://www.kayak.es" target="_blank">Kayak</a> | <a href="https://www.skyscanner.es" target="_blank">Skyscanner</a> | <a href="https://www.iberia.com" target="_blank">Iberia</a>  
+                    <strong>Fechas:</strong> salida ~18-19 mar, regreso 10 abr 2026  
+                    <strong>Notas:</strong> busca conexiones vía Madrid/Barcelona, revisa maleta incluida y tiempos de escala.
+                </div>
+            </div>
+
+            <div class="checklist">
+                <h3>Checklist de reservas</h3>
+                <div class="checklist-item">
+                    <input type="checkbox" id="res1">
+                    <label for="res1">⛴️ Reservar ferry Alicante-Mallorca-Alicante para ti y tu mamá</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="res2">
+                    <label for="res2">🏨 Reservar todos los hostales con cancelación flexible</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="res3">
+                    <label for="res3">🚌 Comprar buses Alsa (fechas y horarios confirmados)</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="res4">
+                    <label for="res4">🚂 Comprar tren Barcelona-Marsella ida y regreso</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="res5">
+                    <label for="res5">✈️ Comprar vuelos Medellín-Alicante-Medellín</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>✨ Guía de Viaje España 2026 | Alicante • Mallorca • Valencia • Barcelona • Marsella</p>
+        <p>Presupuesto objetivo: ~970€ (sin vuelos) | Fechas: 19 mar - 10 abr 2026</p>
+    </footer>
+
+    <script>
+        function switchTab(evt, tabName) {
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(tab => tab.classList.remove('active'));
+
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            tabBtns.forEach(btn => btn.classList.remove('active'));
+
+            document.getElementById(tabName).classList.add('active');
+            evt.currentTarget.classList.add('active');
+
+            // Redibujar mapas al cambiar tab
+            setTimeout(() => {
+                if (window.mapaAlicante) window.mapaAlicante.invalidateSize();
+                if (window.mapaMallorca) window.mapaMallorca.invalidateSize();
+                if (window.mapaValencia) window.mapaValencia.invalidateSize();
+                if (window.mapaBarcelona) window.mapaBarcelona.invalidateSize();
+                if (window.mapaMarseille) window.mapaMarseille.invalidateSize();
+            }, 100);
+        }
+
+        // Inicializar mapas
+        function inicializarMapas() {
+            // Alicante
+            window.mapaAlicante = L.map('mapa-alicante').setView([38.3452, -0.4810], 11);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(window.mapaAlicante);
+            const puntosAlicante = [
+                {lat: 38.3452, lng: -0.4810, num: 1, nombre: 'Playa Postiguet'},
+                {lat: 38.3466, lng: -0.4789, num: 2, nombre: 'Castillo Santa Bárbara'},
+                {lat: 38.3932, lng: -0.2812, num: 3, nombre: 'Faro del Albir'},
+                {lat: 38.1608, lng: -0.5178, num: 4, nombre: 'Isla Tabarca'},
+                {lat: 38.7442, lng: -0.5133, num: 5, nombre: 'Guadalest'}
+            ];
+            puntosAlicante.forEach(p => {
+                L.circleMarker([p.lat, p.lng], {radius: 20, fillColor: '#38bdf8', color: '#0f172a', weight: 3})
+                    .addTo(window.mapaAlicante)
+                    .bindPopup(`<strong>${p.num}. ${p.nombre}</strong>`);
+                L.marker([p.lat, p.lng], {opacity: 0}).addTo(window.mapaAlicante);
+            });
+
+            // Mallorca
+            window.mapaMallorca = L.map('mapa-mallorca').setView([39.5695, 2.6502], 10);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(window.mapaMallorca);
+            const puntosMallorca = [
+                {lat: 39.5714, lng: 2.6423, num: 6, nombre: 'Puerto Palma'},
+                {lat: 39.5650, lng: 2.6470, num: 7, nombre: 'Catedral La Seu'},
+                {lat: 39.7574, lng: 2.5284, num: 8, nombre: 'Serra Tramuntana'},
+                {lat: 39.7507, lng: 2.4975, num: 9, nombre: 'Pueblo Sóller'},
+                {lat: 39.3631, lng: 3.2242, num: 10, nombre: 'Cala Mondragó'}
+            ];
+            puntosMallorca.forEach(p => {
+                L.circleMarker([p.lat, p.lng], {radius: 20, fillColor: '#f97316', color: '#0f172a', weight: 3})
+                    .addTo(window.mapaMallorca)
+                    .bindPopup(`<strong>${p.num}. ${p.nombre}</strong>`);
+            });
+
+            // Valencia
+            window.mapaValencia = L.map('mapa-valencia').setView([39.4699, -0.3763], 12);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(window.mapaValencia);
+            const puntosValencia = [
+                {lat: 39.3864, lng: -0.3197, num: 11, nombre: 'Playa Malvarrosa'},
+                {lat: 39.4729, lng: -0.3630, num: 12, nombre: 'Jardín Turia'},
+                {lat: 39.4712, lng: -0.3844, num: 13, nombre: 'Mercado Central'},
+                {lat: 39.4552, lng: -0.3505, num: 14, nombre: 'Ciudad Artes'},
+                {lat: 39.4737, lng: -0.3820, num: 15, nombre: 'Mercado Seda'}
+            ];
+            puntosValencia.forEach(p => {
+                L.circleMarker([p.lat, p.lng], {radius: 20, fillColor: '#22c55e', color: '#0f172a', weight: 3})
+                    .addTo(window.mapaValencia)
+                    .bindPopup(`<strong>${p.num}. ${p.nombre}</strong>`);
+            });
+
+            // Barcelona
+            window.mapaBarcelona = L.map('mapa-barcelona').setView([41.3851, 2.1734], 12);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(window.mapaBarcelona);
+            const puntosBarcelona = [
+                {lat: 41.4036, lng: 2.1744, num: 16, nombre: 'Sagrada Familia'},
+                {lat: 41.3847, lng: 2.1760, num: 17, nombre: 'Barrio Gòtico'},
+                {lat: 41.3946, lng: 2.1655, num: 18, nombre: 'Paseo de Gràcia'},
+                {lat: 41.3837, lng: 2.1920, num: 19, nombre: 'Playas'},
+                {lat: 41.4067, lng: 2.1544, num: 20, nombre: 'Bunkers del Carmel'}
+            ];
+            puntosBarcelona.forEach(p => {
+                L.circleMarker([p.lat, p.lng], {radius: 20, fillColor: '#6366f1', color: '#0f172a', weight: 3})
+                    .addTo(window.mapaBarcelona)
+                    .bindPopup(`<strong>${p.num}. ${p.nombre}</strong>`);
+            });
+
+            // Marsella
+            window.mapaMarseille = L.map('mapa-marseille').setView([43.2965, 5.3698], 11);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(window.mapaMarseille);
+            const puntosMarseille = [
+                {lat: 43.2949, lng: 5.3632, num: 21, nombre: 'Vieux Port'},
+                {lat: 43.2268, lng: 5.3386, num: 22, nombre: 'Calanques'},
+                {lat: 43.3017, lng: 5.3806, num: 23, nombre: 'Cours Julien'},
+                {lat: 43.2936, lng: 5.3736, num: 24, nombre: 'Fort Saint-Jean'},
+                {lat: 43.2899, lng: 5.3766, num: 25, nombre: 'Playa Prado'}
+            ];
+            puntosMarseille.forEach(p => {
+                L.circleMarker([p.lat, p.lng], {radius: 20, fillColor: '#a855f7', color: '#0f172a', weight: 3})
+                    .addTo(window.mapaMarseille)
+                    .bindPopup(`<strong>${p.num}. ${p.nombre}</strong>`);
+            });
+        }
+
+        // Inicializar cuando se carga la página y cuando se abre tab de mapas
+        window.addEventListener('load', inicializarMapas);
+
+        document.querySelectorAll('.checklist-item input').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const id = this.id;
+                try {
+                    localStorage.setItem(id, this.checked);
+                } catch (e) {
+                    // Si el entorno no permite localStorage, simplemente no se persiste
+                }
+            });
+
+            try {
+                if (localStorage.getItem(checkbox.id)) {
+                    checkbox.checked = localStorage.getItem(checkbox.id) === 'true';
+                }
+            } catch (e) {
+                // Ignorar si localStorage no está disponible
+            }
+        });
+
+        window.addEventListener('load', () => {
+            const firstTab = document.querySelector('.tab-btn');
+            if (firstTab) firstTab.click();
+        });
+    </script>
+</body>
+</html>
